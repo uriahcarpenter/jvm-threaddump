@@ -16,11 +16,15 @@ environment_image:
         key: SSH_KEY
         value: GIT_SSH_KEY
         path: secret/pipeline-default/GIT_SSH_KEY
-      - type: vault
-        key: JFROG_USER
-        value: ACQUIA_JFROG_USER
-        path: secret/<tbd>/ACQUIA_JFROG_USER
-      - type: vault
-        key: JFROG_TOKEN
-        value: ACQUIA_JFROG_TOKEN
-        path: secret/<tbd>/ACQUIA_JFROG_TOKEN
+
+
+pre_build:
+  gradlew assemble:
+    - steps:
+        - /bin/bash -l -c "./gradlew assemble"
+
+build:
+  service_image:
+    - name: acquia/jvm-threaddump
+      file: "Dockerfile"
+      context: "."

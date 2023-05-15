@@ -6,4 +6,4 @@ WORKDIR /jvm-threaddump
 
 COPY . ./
 
-ENTRYPOINT ["/bin/bash", "-l", "-c"]
+RUN /bin/bash -l -c "./gradlew assemble"
