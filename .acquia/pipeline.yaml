@@ -1,0 +1,26 @@
+---
+type: default
+team: # need from consumer
+group: # need from consumer
+service: jvm-threaddump
+
+# The environment container image is used to prepare code versions
+# and tooling for tests during pre, post and build stages.
+environment_image:
+  file: ".acquia/Dockerfile.ci"
+  context: "."
+  args: ""
+  build_args:
+    - secrets:
+      - type: vault
+        key: SSH_KEY
+        value: GIT_SSH_KEY
+        path: secret/pipeline-default/GIT_SSH_KEY
+      - type: vault
+        key: JFROG_USER
+        value: ACQUIA_JFROG_USER
+        path: secret/<tbd>/ACQUIA_JFROG_USER
+      - type: vault
+        key: JFROG_TOKEN
+        value: ACQUIA_JFROG_TOKEN
+        path: secret/<tbd>/ACQUIA_JFROG_TOKEN

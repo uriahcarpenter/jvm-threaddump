@@ -1,0 +1,39 @@
+ARG BASE_IMAGE=gradle:jdk11
+# ARG BASE_IMAGE=adoptopenjdk:11-jdk-hotspot
+# ARG BASE_IMAGE=maven:3.8-jdk-8-slim
+ARG REPO_LOCATION
+FROM ${REPO_LOCATION}${BASE_IMAGE}
+
+WORKDIR /jvm-threaddump
+
+# Copy the build script and project files
+# ADD . ./
+# ADD build.gradle .
+# ADD settings.gradle .
+# # COPY src src
+# ADD gradlew .
+# # Build the application
+# RUN ./gradlew build
+
+
+COPY . ./
+
+# Copy the Gradle Wrapper files to the working directory
+COPY gradlew .
+COPY gradle gradle
+
+# Set environment variables
+# ENV ACQUIA_JFROG_USER=${ACQUIA_JFROG_USER}
+# ENV ACQUIA_JFROG_TOKEN=${ACQUIA_JFROG_TOKEN}
+
+# Grant execute permissions to the Gradle Wrapper
+RUN /bin/bash -l -c "chmod +x gradlew"
+#
+# # Run the Gradle build inside the container
+# RUN /bin/bash -l -c "./gradlew build"
+#
+RUN /bin/bash -l -c "./gradlew assemble"
+
+# What will be Base image
+# ENV variables defined and their values to be stored in vault.
+# RUN steps to build project.
