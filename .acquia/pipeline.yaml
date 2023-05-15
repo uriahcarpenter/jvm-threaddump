@@ -25,6 +25,6 @@ pre_build:
 
 build:
   service_image:
-    - name: acquia/jvm-threaddump
+    - name: widen/jvm-threaddump
       file: "Dockerfile"
       context: "."
