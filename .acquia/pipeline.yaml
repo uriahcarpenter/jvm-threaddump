@@ -17,8 +17,14 @@ environment_image:
         value: GIT_SSH_KEY
         path: secret/pipeline-default/GIT_SSH_KEY
 
-
 pre_build:
+  code_analysis:
+    required: false
+    project_key: acquia.widen.bucc:jvm-threaddump
+    quality_gate:
+      wait_for_quality_gate: true
+      max_time_limit: 3
+      abort_pipeline: false
   gradlew assemble:
     - steps:
         # - /bin/bash -l -c "./gradlew assemble"
