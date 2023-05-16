@@ -21,7 +21,7 @@ environment_image:
 pre_build:
   gradlew assemble:
     - steps:
-        - /bin/bash -l -c "./gradlew assemble"
+        # - /bin/bash -l -c "./gradlew assemble"
 
 build:
   service_image:
