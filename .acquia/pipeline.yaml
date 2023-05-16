@@ -1,7 +1,7 @@
 ---
 type: default
-team: # need from consumer
-group: # need from consumer
+team: bucc
+group: widen
 service: jvm-threaddump
 
 # The environment container image is used to prepare code versions
