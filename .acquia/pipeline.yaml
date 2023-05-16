@@ -20,7 +20,7 @@ environment_image:
 pre_build:
   code_analysis:
     required: false
-    project_key: acquia.widen.bucc:jvm-threaddump
+    project_key: acquia.content-cloud.bucc:jvm-threaddump
     quality_gate:
       wait_for_quality_gate: true
       max_time_limit: 3
