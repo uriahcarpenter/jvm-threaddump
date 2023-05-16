@@ -1,7 +1,7 @@
 ---
 type: default
 team: bucc
-group: widen
+group: content-cloud
 service: jvm-threaddump
 
 # The environment container image is used to prepare code versions
