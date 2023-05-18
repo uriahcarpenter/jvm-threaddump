@@ -24,7 +24,8 @@ pre_build:
         # - /bin/bash -l -c "./gradlew assemble"
 
 build:
-  service_image:
-    - name: widen/jvm-threaddump
-      file: "Dockerfile"
-      context: "."
+  service_package:
+    - type: maven
+      pattern: '*.jar'
+      props:
+        - maintainer=widen
