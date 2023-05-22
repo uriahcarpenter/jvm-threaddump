@@ -1,4 +1,4 @@
-[![Build Status](https://core.cloudbees.ais.acquia.io/devops-pipeline-4-jenkins/buildStatus/icon?job=BUCC-jvm-threaddump-PIPELINE%2Fmaster)](https://core.cloudbees.ais.acquia.io/devops-pipeline-4-jenkins/job/BUCC-jvm-threaddump-PIPELINE/job/master/)
+[![Build Status](https://core.cloudbees.ais.acquia.io/devops-pipeline-4-jenkins/buildStatus/icon?job=BUCC-jvm-threaddump-PIPELINE%2Fmaster)](https://core.cloudbees.ais.acquia.io/devops-pipeline-4-jenkins/job/BUCC-jvm-threaddump-PIPELINE)
 
 # Simple JVM Thread Dump
 
