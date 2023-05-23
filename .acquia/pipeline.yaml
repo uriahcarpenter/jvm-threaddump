@@ -32,7 +32,7 @@ deploy:
   - component: custom
     dev:
       - steps:
-          - ls -ltr
+        - ls -ltr
     qa:
       - steps:
         - echo ""
