@@ -30,14 +30,14 @@ build:
 
 deploy:
     dev:
+      timeout: 3
       # check_health: true # Enable Health Check on acd deployment (Default: false)
-      # timeout: 3         # Maximum timeout 3 minutes for the acd command (Default: 5 minutes)
     qa:
+      timeout: 3
       # check_health: false
-      # timeout: 5
     staging:
+      timeout: 3
       # check_health: true # Enable Health Check on acd deployment
-      # timeout: 5
     prod:
+      timeout: 5
       # check_health: true
-      # timeout: 5
