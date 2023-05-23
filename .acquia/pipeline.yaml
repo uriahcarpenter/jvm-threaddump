@@ -29,15 +29,16 @@ build:
         - maintainer=widen
 
 deploy:
-  dev:
-    timeout: 3
-    # check_health: true # Enable Health Check on acd deployment (Default: false)
-  qa:
-    timeout: 3
-    # check_health: false
-  staging:
-    timeout: 3
-    # check_health: true # Enable Health Check on acd deployment
-  prod:
-    timeout: 5
-    # check_health: true
+  - component: custom
+    dev:
+      - steps:
+          - ls -ltr
+    qa:
+      - steps:
+        - echo ""
+    staging:
+      - steps:
+        - echo ""
+    prod:
+      - steps:
+        - echo ""
