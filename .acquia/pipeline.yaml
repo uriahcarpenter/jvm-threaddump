@@ -29,6 +29,7 @@ build:
         - maintainer=widen
 
 deploy:
+  - component: custom
     dev:
       timeout: 3
       # check_health: true # Enable Health Check on acd deployment (Default: false)
