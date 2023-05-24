@@ -28,17 +28,3 @@ build:
       props:
         - maintainer=widen
 
-deploy:
-  - component: custom
-    dev:
-      - steps:
-        - ls -ltr
-    qa:
-      - steps:
-        - echo ""
-    staging:
-      - steps:
-        - echo ""
-    prod:
-      - steps:
-        - echo ""
