@@ -1,0 +1,30 @@
+---
+type: default
+team: bucc
+group: content-cloud
+service: jvm-threaddump
+
+# While debugging validate the formatting of this pipeline.yaml file.
+validate_config: true
+
+# The environment container image is used to prepare code versions
+# and tooling for tests during pre, post and build stages.
+environment_image:
+  file: ".acquia/Dockerfile.ci"
+  context: "."
+  args: ""
+
+pre_build:
+  code_analysis:
+    required: false
+  gradlew assemble:
+    - steps:
+      - ""
+
+build:
+  service_package:
+    - type: maven
+      pattern: '*.jar'
+      props:
+        - maintainer=widen
+

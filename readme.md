@@ -1,3 +1,5 @@
+[![Build Status](https://core.cloudbees.ais.acquia.io/devops-pipeline-4-jenkins/buildStatus/icon?job=BUCC-jvm-threaddump-PIPELINE%2Fmaster)](https://core.cloudbees.ais.acquia.io/devops-pipeline-4-jenkins/job/BUCC-jvm-threaddump-PIPELINE)
+
 # Simple JVM Thread Dump
 
 This project formats JVM info as simple text. It works well as a zero-configuration debugging tool for web-based applications.
