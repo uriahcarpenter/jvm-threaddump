@@ -1,6 +1,7 @@
 package com.widen.util.td;
 
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.CoreMatchers.containsString;
@@ -11,6 +12,7 @@ public class TestDeadlock
 {
 
     @Test
+    // @Disabled
     public void testDeadlockThreadDump() throws InterruptedException {
         DeadlockThread.startThreads();
         Thread.sleep(1000);
