@@ -12,7 +12,6 @@ subprojects {
             credentials(HttpHeaderCredentials) {
                 name = 'Authorization'
                 value = "Bearer " + (System.env.ACQUIA_JFROG_TOKEN ?: ACQUIA_JFROG_TOKEN)
-                  // can be simplified to "Bearer " + ACQUIA_JFROG_TOKEN if environment variable is named ORG_GRADLE_PROJECT_ACQUIA_JFROG_TOKEN
             }
             authentication {
                 header(HttpHeaderAuthentication)
